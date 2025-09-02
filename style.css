@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -35,3 +36,42 @@ img {
     display: block;
     margin-top: 20px;
 }
+=======
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #555;
+}
+
+h3 {
+    color: #666;
+}
+
+ul, ol {
+    margin: 10px 0 20px 20px;
+}
+
+img {
+    display: block;
+    margin-top: 20px;
+}
+>>>>>>> 169b65194eb8e1eaf86c43642785d0c12aa7f570
