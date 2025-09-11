@@ -1,70 +1,97 @@
 /* Base styles */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f5;
-  color: #333;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f0f0f5, #d9e4f5);
+    color: #333;
 }
 
-h1 { color: #333; }
-h2 { color: #555; }
-h3 { color: #666; }
+h1 { font-size: 2.5em; color: white; text-align: center; }
+h2 { font-size: 2em; color: #444; }
+h3 { font-size: 1.5em; color: #555; }
 
-ul, ol {
-  margin: 10px 0 20px 20px;
-}
+ul, ol { margin: 10px 0 20px 20px; }
 
 /* Header and footer */
 #main-header, #page2-header, #main-footer, #page2-footer {
-  background-color: #444;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
+
+/* Navigation buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #00aaff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover { background-color: #0077aa; }
 
 /* Sections */
 .game-section, .game-genres, .evolution-section {
-  padding: 20px;
-  margin: 10px;
-  background-color: #fff;
-  border-radius: 5px;
+    padding: 20px;
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 1000px;
 }
 
-/* Flexbox container */
+/* Flex container for cards */
 .game-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
+/* Cards */
 .game-card {
-  background-color: #e0e0ff;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
+    width: 100%;
+    max-width: 250px;
+    padding: 15px;
+    text-align: center;
+    background-color: #cce0ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Images inside cards */
+.game-card img, .evolution-section img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 15px auto 0 auto;
+    border-radius: 8px;
 }
 
 /* Links */
-a {
-  color: #00aaff;
-  text-decoration: none;
-}
+a { color: #00aaff; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive design */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .game-container {
-    flex-direction: column;
-    align-items: center;
-  }
+    body { font-size: 16px; padding: 10px; }
+    .game-card { max-width: 90%; }
+    .game-container { flex-direction: column; align-items: center; }
+    .btn { width: 80%; text-align: center; }
+    .evolution-section img { max-width: 90%; }
 }
