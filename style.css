@@ -1,53 +1,130 @@
-/* Base styles */
+/* Custom styles for Video Games 101 - Refactored for Bootstrap */
+
+/* Base styles - keeping unique customizations */
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background: linear-gradient(to bottom, #f0f0f5, #d9e4f5);
-    color: #333;
+    min-height: 100vh;
 }
 
-h1 { font-size: 2.5em; color: white; text-align: center; }
-h2 { font-size: 2em; color: #444; }
-h3 { font-size: 1.5em; color: #555; }
+/* Custom header styling - unique gradient and colors */
+#main-header, #page2-header {
+    background: linear-gradient(135deg, #444, #666);
+    color: white
+}
 
-ul, ol { margin: 10px 0 20px 20px; }
-
-/* Header and footer */
-#main-header, #page2-header, #main-footer, #page2-footer {
-    background-color: #444;
+/* Custom footer styling to match header */
+#main-footer, #page2-footer {
+    background: linear-gradient(135deg, #444, #666);
     color: #fff;
-    padding: 20px;
-    text-align: center;
 }
 
-/* Navigation buttons */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
+/* Custom button styling - maintaining brand colors */
+.btn-primary {
     background-color: #00aaff;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
+    border-color: #00aaff;
     font-weight: bold;
-    transition: background 0.3s;
 }
 
-.btn:hover { background-color: #0077aa; }
+.btn-primary:hover {
+    background-color: #0077aa;
+    border-color: #0077aa;
+}
 
-/* Sections */
-.game-section, .game-genres, .evolution-section {
-    padding: 20px;
-    margin: 10px auto;
-    background-color: #fff;
+/* Custom card styling - maintaining the blue theme */
+.game-card {
+    background: linear-gradient(145deg, #cce0ff, #b3d4ff);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 170, 255, 0.3) !important;
+}
+
+/* Custom card images - rounded corners */
+.game-card img {
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    max-width: 1000px;
+    object-fit: cover;
+    height: 200px;
 }
 
-/* Flex container for cards */
+/* Custom section backgrounds with subtle styling */
+.game-section, .game-genres, .evolution-section {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Custom list styling */
+.list-group-item {
+    border-color: rgba(0, 170, 255, 0.2);
+    background-color: rgba(249, 249, 249, 0.8);
+}
+
+.list-group-item:hover {
+    background-color: rgba(0, 170, 255, 0.1);
+    transform: translateX(5px);
+    transition: all 0.2s ease;
+}
+
+/* Custom text colors for headings */
+h1 {
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #white!important;
+    font-weight: 700;
+}
+
+h3, .h4 {
+    color: #555 !important;
+    font-weight: 600;
+}
+
+/* Custom link colors */
+a:not(.btn) {
+    color: #00aaff;
+    transition: color 0.2s ease;
+}
+
+a:not(.btn):hover {
+    color: #0077aa;
+}
+
+/* Custom badge colors to match theme */
+.badge.bg-primary {
+    background-color: #00aaff !important;
+}
+
+/* Custom responsive adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.2rem;
+    }
+
+    .game-card img {
+        height: 180px;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/*
+COMMENTED OUT - Now handled by Bootstrap:
+
+Flexbox layouts - replaced with Bootstrap grid system
+Card container flex properties - using Bootstrap row/col
+Basic padding/margins - using Bootstrap spacing utilities
+Basic text alignment - using Bootstrap text utilities
+Basic responsive design - using Bootstrap responsive classes
+
 .game-container {
     display: flex;
     flex-wrap: wrap;
@@ -55,43 +132,27 @@ ul, ol { margin: 10px 0 20px 20px; }
     gap: 20px;
 }
 
-/* Cards */
 .game-card {
     width: 100%;
     max-width: 250px;
     padding: 15px;
     text-align: center;
-    background-color: #cce0ff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     margin: 10px;
     box-sizing: border-box;
 }
 
-.game-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
+Basic section styling - now using Bootstrap classes:
+padding: 20px;
+margin: 10px auto;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+max-width: 1000px;
 
-/* Images inside cards */
-.game-card img, .evolution-section img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    display: block;
-    margin: 15px auto 0 auto;
-    border-radius: 8px;
-}
+Button base styles - using Bootstrap button classes:
+display: inline-block;
+padding: 10px 20px;
+margin-top: 10px;
+border-radius: 5px;
+text-decoration: none;
 
-/* Links */
-a { color: #00aaff; text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    body { font-size: 16px; padding: 10px; }
-    .game-card { max-width: 90%; }
-    .game-container { flex-direction: column; align-items: center; }
-    .btn { width: 80%; text-align: center; }
-    .evolution-section img { max-width: 90%; }
-}
+*/
