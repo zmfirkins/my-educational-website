@@ -4,60 +4,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Games 101</title>
+  <!-- Bootstrap CSS CDN (added above custom CSS) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Header -->
-  <header id="main-header">
-    <h1>Video Games 101</h1>
-    <!-- Navigation -->
-    <nav>
-      <a class="btn" href="page2.html">Learn More About Gaming</a>
-    </nav>
+  <header id="main-header" class="text-center py-4">
+    <div class="container">
+      <h1 class="display-4 mb-3">Video Games 101</h1>
+      <!-- Navigation -->
+      <nav>
+        <a class="btn btn-primary btn-lg" href="page2.html">Learn More About Gaming</a>
+      </nav>
+    </div>
   </header>
-    <!-- Main-->
-  <main>
-    <section class="game-section">
-      <h2>History of Video Games</h2>
-      <p>Video games started in the 1970s with simple arcade games like Pong and have evolved into complex 3D worlds.</p>
-      <p>Gaming continues to grow as technology improves, offering immersive experiences across consoles, PCs, and mobile devices.</p>
 
-      <!-- Game cards -->
-      <div class="game-container">
-        <div class="game-card">
-          <img src="images/img1.jpg" alt="Classic arcade game screenshot">
-          <h3>Classic Arcade</h3>
-          <p>Fun and simple games that shaped early gaming culture.</p>
+  <!-- Main Content -->
+  <main class="container my-5">
+    <section class="game-section bg-white rounded shadow p-4 mb-4">
+      <h2 class="text-center mb-4">History of Video Games</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <p class="lead">Video games started in the 1970s with simple arcade games like Pong and have evolved into complex 3D worlds.</p>
+          <p>Gaming continues to grow as technology improves, offering immersive experiences across consoles, PCs, and mobile devices.</p>
         </div>
-        <div class="game-card">
-          <img src="images/img2.jpg" alt="Modern 3D game screenshot">
-          <h3>Modern 3D Games</h3>
-          <p>Immersive worlds with advanced graphics and storytelling.</p>
+      </div>
+
+      <!-- Game cards using Bootstrap grid -->
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-5 col-lg-4 mb-4">
+          <div class="game-card card h-100 shadow-sm">
+            <img src="images/img1.jpg" class="card-img-top" alt="Classic arcade game screenshot">
+            <div class="card-body text-center">
+              <h3 class="card-title h5">Classic Arcade</h3>
+              <p class="card-text">Fun and simple games that shaped early gaming culture.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-lg-4 mb-4">
+          <div class="game-card card h-100 shadow-sm">
+            <img src="images/img2.jpg" class="card-img-top" alt="Modern 3D game screenshot">
+            <div class="card-body text-center">
+              <h3 class="card-title h5">Modern 3D Games</h3>
+              <p class="card-text">Immersive worlds with advanced graphics and storytelling.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!-- =Game Genre -->
-    <section class="game-genres">
-      <h2>Popular Game Genres</h2>
-      <ul>
-        <li>Action</li>
-        <li>Adventure</li>
-        <li>RPG</li>
-        <li>Strategy</li>
-      </ul>
-      <!-- Tips -->
-      <h3>Tips for New Gamers</h3>
-      <ol>
-        <li>Play daily to improve skills</li>
-        <li>Join online communities</li>
-        <li>Participate in tournaments</li>
-      </ol>
+
+    <!-- Game Genres -->
+    <section class="game-genres bg-white rounded shadow p-4">
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <h2 class="mb-3">Popular Game Genres</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Action</li>
+            <li class="list-group-item">Adventure</li>
+            <li class="list-group-item">RPG</li>
+            <li class="list-group-item">Strategy</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-6">
+          <h3 class="mb-3">Tips for New Gamers</h3>
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item">Play daily to improve skills</li>
+            <li class="list-group-item">Join online communities</li>
+            <li class="list-group-item">Participate in tournaments</li>
+          </ol>
+        </div>
+      </div>
     </section>
   </main>
+
   <!-- Footer -->
-  <footer id="main-footer">
-    <p>&copy; 2025 Video Games 101</p>
+  <footer id="main-footer" class="text-center py-3 mt-5">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Video Games 101</p>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
